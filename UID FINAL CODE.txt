@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AUTOMATIC STREET LIGHTING SYSTEM</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f4f4f4;
+    }
+
+    header {
+      background-color: #004080;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    nav {
+      background: #003366;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 10px 0;
+    }
+
+    nav button {
+      background: #0059b3;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      margin: 5px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    nav button:hover {
+      background: #0073e6;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .page {
+      display: none;
+    }
+
+    .active {
+      display: block;
+    }
+
+    .box {
+      background: white;
+      border-left: 5px solid #004080;
+      margin: 10px 0;
+      padding: 15px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      color: #004080;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+      background: white;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    th, td {
+      padding: 10px;
+      border: 1px solid #ccc;
+      text-align: left;
+    }
+
+    th {
+      background-color: #e0e0e0;
+    }
+
+    .circuit-img {
+      display: block;
+      max-width: 100%;
+      margin: 20px auto;
+      border: 3px solid #004080;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>EEE Final Review</h1>
+  </header>
+
+  <nav>
+    <button onclick="showPage(0)">Index</button>
+    <button onclick="showPage(1)">Headings</button>
+    <button onclick="showPage(2)">Introduction</button>
+    <button onclick="showPage(3)">Literature Review</button>
+    <button onclick="showPage(4)">Research Gaps</button>
+    <button onclick="showPage(5)">Problem Definition</button>
+    <button onclick="showPage(6)">Objectives</button>
+    <button onclick="showPage(7)">Methodology - LDR</button>
+    <button onclick="showPage(8)">Methodology - Energy</button>
+    <button onclick="showPage(9)">Conclusion</button>
+    <button onclick="showPage(10)">Future Scope</button>
+    <button onclick="showPage(11)">Thank You</button>
+  </nav>
+
+  <div class="container">
+    <!-- Index -->
+    <div class="page active">
+      <h2>Index</h2>
+      <div class="box">Introduction</div>
+      <div class="box">Literature Review</div>
+      <div class="box">Research Gaps</div>
+      <div class="box">Problem Definition</div>
+      <div class="box">Objectives</div>
+      <div class="box">Methodology - LDR</div>
+      <div class="box">Methodology - Energy Saving</div>
+      <div class="box">Conclusion</div>
+      <div class="box">Future Scope</div>
+      <div class="box">Thank You</div>
+    </div>
+
+    <!-- Headings -->
+    <div class="page">
+      <h2>Section Headings</h2>
+      <div class="box">Introduction</div>
+      <div class="box">Literature Review</div>
+      <div class="box">Research Gaps</div>
+      <div class="box">Problem Definition</div>
+      <div class="box">Objectives</div>
+      <div class="box">Methodology - LDR</div>
+      <div class="box">Methodology - Energy Saving</div>
+      <div class="box">Conclusion</div>
+      <div class="box">Future Scope</div>
+      <div class="box">Thank You</div>
+    </div>
+
+    <!-- Introduction -->
+    <div class="page">
+      <h2>Introduction</h2>
+      <div class="box">Street lighting is essential for public safety during nighttime but often leads to unnecessary energy consumption due to continuous operation.</div>
+      <div class="box">The proposed system uses an Arduino Uno and Light Dependent Resistor (LDR) to automatically switch street lights on at night and off during the day based on ambient light levels.</div>
+      <div class="box">Infrared (IR) sensors are included to detect the presence of vehicles, allowing dynamic control of light intensity—brightening when vehicles are nearby and dimming when the road is empty.</div>
+      <div class="box">This automation reduces manual labor and makes the system more efficient, reliable, and responsive to real-time environmental changes.</div>
+      <div class="box">The setup is cost-effective and easy to implement, using affordable components like LEDs, resistors, sensors, and Arduino, making it suitable for streets, campuses, and public areas.</div>
+    </div>
+
+    <!-- Literature Review -->
+    <div class="page">
+      <h2>Literature Review</h2>
+      <table>
+        <tr>
+          <th>S.NO</th>
+          <th>TITLE</th>
+          <th>YEAR</th>
+          <th>METHODOLOGY</th>
+          <th>Contributions</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Intelligent Street Lighting System Using IoT</td>
+          <td>2017</td>
+          <td>IoT-based sensor integration</td>
+          <td>Energy-efficient and smart adaptive lighting</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Design and Implementation of Smart Street Lighting System</td>
+          <td>2018</td>
+          <td>Microcontroller and LDR sensors</td>
+          <td>Automatic brightness adjustment based on ambient light</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Energy Saving Street Lighting System</td>
+          <td>2019</td>
+          <td>PIR sensors and LED integration</td>
+          <td>Significant reduction in energy consumption</td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- Research Gaps -->
+    <div class="page">
+      <h2>Research Gaps</h2>
+      <div class="box">Lack of Real-Time Adaptive Control Using AI/ML: While the system relies on fixed thresholds from LDR and IR sensors, it doesn't incorporate machine learning algorithms to adaptively adjust brightness or predict usage based on traffic patterns, weather conditions, or seasonal variations.</div>
+      <div class="box">Limited Communication and Integration Capabilities: The current model is standalone and lacks IoT connectivity or wireless communication (e.g., Bluetooth, Wi-Fi, or LoRa) for remote monitoring, control, and data analytics, which are essential for scalable smart city infrastructure.</div>
+      <div class="box">Energy Source Optimization Not Implemented: Though the system mentions energy savings using LEDs, it doesn't integrate renewable energy sources (like solar panels) or energy storage mechanisms, nor does it optimize energy distribution based on usage and location-specific conditions.</div>
+    </div>
+
+    <!-- Problem Definition -->
+    <div class="page">
+      <h2>Problem Definition</h2>
+      <div class="box">Urban and Suburban Streets: Busy streets in cities and towns where consistent and energy-efficient lighting is essential for safety and visibility.</div>
+      <div class="box">Highways: Major roads and highways, where continuous lighting is needed for vehicle and pedestrian safety.</div>
+      <div class="box">Residential Areas: Housing complexes, neighborhoods, and local roads that require street lighting for security and navigation after sunset.</div>
+      <div class="box">Parking Lots and Walkways: Public parking spaces and pedestrian walkways where lighting is essential for security and safety.</div>
+      <div class="box">Parks and Gardens: Outdoor spaces where lighting is needed after dark but can be controlled to save energy during non-peak hours.</div>
+    </div>
+
+    <!-- Objectives -->
+    <div class="page">
+      <h2>Objectives</h2>
+      <div class="box">To design an automatic street light system that uses an LDR sensor to switch lights on at night and off during the day, reducing manual operation.</div>
+      <div class="box">To detect vehicles or people using IR sensors and adjust the brightness of street lights only when needed, saving electricity and improving energy efficiency.</div>
+      <div class="box">To create a cost-effective and smart lighting solution using Arduino, aiming to enhance road safety, reduce power waste, and lower maintenance efforts.</div>
+      </div>
+
+    <!-- Methodology - LDR -->
+    <div class="page">
+      <h2>Methodology - LDR</h2>
+      <div class="box">The LDR continuously monitors ambient light levels. When the surrounding light falls below a preset threshold (indicating dusk or darkness), it sends a signal to the Arduino microcontroller.</div>
+      <div class="box">The Arduino processes the signal received from the LDR. If low light is detected, it activates the street lighting system.</div>
+      <div class="box">IR sensors are positioned to detect the movement of vehicles or pedestrians. If motion is detected, the IR sensor sends a signal to the Arduino to turn ON the street lights at 100% brightness.</div>
+    </div>
+
+    <!-- Methodology - Energy Saving -->
+    <div class="page">
+      <h2>Methodology - Energy Saving</h2>
+      <div class="box">In the absence of motion, the microcontroller reduces the brightness of the street lights, thus conserving energy. This dimming feature helps reduce power consumption by up to 60% compared to systems that keep lights at full brightness all night.</div>
+      <div class="box">The Arduino controls the LEDs based on real-time input from both the LDR and IR sensors. This dual-input system ensures that lights are ON only when needed (at night and when motion is detected), and OFF or dimmed when not required.</div>
+      <div class="box">The system is programmed using the Arduino IDE. The code reads analog input from the LDR and digital input from the IR sensors. Based on sensor values, it controls the LED output via GPIO pins.</div>
+    </div>
+
+    <!-- Conclusion -->
+    <div class="page">
+      <h2>Conclusion</h2>
+      <div class="box">The automatic street light system successfully reduces power consumption by turning lights on only in the dark and when vehicles are detected, making it energy-efficient.</div>
+      <div class="box">Using Arduino and sensors like LDR and IR makes the system low-cost, reliable, and easy to implement, especially in urban and rural areas.</div>
+      <div class="box">This system also reduces the need for manual work and improves road safety, making it a practical solution for modern smart cities.</div>
+    </div>
+
+    <!-- Future Scope -->
+    <div class="page">
+      <h2>Future Scope</h2>
+      <div class="box">Integration with solar panels can make the system more energy-efficient and environmentally friendly by using renewable energy sources.</div>
+      <div class="box">Adding wireless communication (like Bluetooth or IoT) can help in remote monitoring and control of the street lights, making it smarter and easier to manage.</div>
+      <div class="box">Using machine learning and advanced sensors can improve the system’s ability to detect traffic patterns and adjust lighting more intelligently.</div>
+    </div>
+
+    <!-- Thank You -->
+    <div class="page">
+      <h2 style="text-align: center;">THANK YOU</h2>
+    </div>
+  </div>
+
+  <script>
+    const pages = document.querySelectorAll('.page');
+    function showPage(index) {
+      pages.forEach((p, i) => p.classList.toggle('active', i === index));
+    }
+  </script>
+</body>
+</html>
